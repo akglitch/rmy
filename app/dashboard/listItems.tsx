@@ -9,7 +9,7 @@ import PeopleIcon from '@mui/icons-material/People';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import LayersIcon from '@mui/icons-material/Layers';
 import AssignmentIcon from '@mui/icons-material/Assignment';
-import { Print, Scanner, ScannerSharp } from '@mui/icons-material';
+import { Book, Print, Scanner, ScannerSharp } from '@mui/icons-material';
 
 
 export const MainListItems  = (props: any) => {
@@ -36,18 +36,34 @@ export const MainListItems  = (props: any) => {
        </ListItemIcon>
        <ListItemText primary="Outgoing" />
      </ListItemButton>
+     <ListSubheader component="div" inset>
+      Record Forms
+    </ListSubheader> 
+
+    <ListItemButton onClick={() => setCurrView(3)}>
+       <ListItemIcon>
+         <Book />
+       </ListItemIcon>
+       <ListItemText primary="Incoming_Form" />
+     </ListItemButton>
+     <ListItemButton onClick={() => setCurrView(4)}>
+      <ListItemIcon>
+        <Book/>
+      </ListItemIcon>
+      <ListItemText primary="OutgoingForm" />
+    </ListItemButton>
      
      <ListSubheader component="div" inset>
       Document Action
     </ListSubheader> 
     
-     <ListItemButton onClick={() => setCurrView(3)}>
+     <ListItemButton onClick={() => setCurrView(5)}>
        <ListItemIcon>
          <Print />
        </ListItemIcon>
        <ListItemText primary="Print" />
      </ListItemButton>
-     <ListItemButton onClick={() => setCurrView(4)}>
+     <ListItemButton onClick={() => setCurrView(6)}>
       <ListItemIcon>
         < Scanner/>
       </ListItemIcon>

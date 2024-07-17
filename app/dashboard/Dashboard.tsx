@@ -26,11 +26,13 @@ import { SITENAME } from "@/utils/data";
 import Incoming from "./dashIncomingRecord";
 import IncomingRecord from "./Incoming";
 import Outgoing from "./dashOutgoingRecord";
-import OutgoingRecord from "./Ougoing";
+import OutgoingRecord from "./Outgoing";
 import TotalOutgoingRecords from "./totalOutgoing";
 import TotalIncomingRecords from "./totalIncoming";
 import PrintDocument from "./printDocument";
 import ScanDocument from "./scanDocument";
+import IncomingRecordForm from "./IncomingForm";
+import OutgoingRecordForm from "./OutgoingForm";
 
 
 
@@ -104,6 +106,8 @@ export default function Dashboard() {
     <MainView key={Math.random()} />,
     <IncomingRecord key={Math.random()} />,
     <OutgoingRecord key={Math.random()} />,
+    <IncomingRecordForm key={Math.random()} />,
+    <OutgoingRecordForm  key={Math.random()} />,
     <PrintDocument key={Math.random()} />,
     <ScanDocument key={Math.random()} />
     
@@ -136,7 +140,7 @@ export default function Dashboard() {
           <Typography
             component="h1"
             variant="h6"
-            color="dark"
+            color="#212121"
             noWrap
             sx={{ flexGrow: 1 }}
           >
@@ -256,3 +260,5 @@ function MainView() {
     </Container>
   );
 }
+
+

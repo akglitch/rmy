@@ -14,3 +14,18 @@ export interface RecordData {
     subject: string;
   }
   
+
+  export interface outgoingRecordData {
+    _id: string;
+    year: string;
+    month: string;
+    serial_no: string;
+    date_received: string;
+    date_dispatched: string;
+    reference_no: string;
+    folio_no: string;
+    addressee: string;
+    mode_of_dispatch: string;
+    subject: string;
+  }
+  

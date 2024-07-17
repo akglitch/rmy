@@ -9,7 +9,7 @@ import PeopleIcon from '@mui/icons-material/People';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import LayersIcon from '@mui/icons-material/Layers';
 import AssignmentIcon from '@mui/icons-material/Assignment';
-import { Book, Print, Scanner, ScannerSharp } from '@mui/icons-material';
+import { Book, Note, Print, Scanner, ScannerSharp } from '@mui/icons-material';
 
 
 export const MainListItems  = (props: any) => {
@@ -26,13 +26,13 @@ export const MainListItems  = (props: any) => {
      </ListItemButton>
      <ListItemButton onClick={() => setCurrView(1)}>
        <ListItemIcon>
-         <ShoppingCartIcon />
+         <Book />
        </ListItemIcon>
        <ListItemText primary="Incoming" />
      </ListItemButton>
      <ListItemButton onClick={() => setCurrView(2)}>
        <ListItemIcon>
-         <PeopleIcon />
+         <Book />
        </ListItemIcon>
        <ListItemText primary="Outgoing" />
      </ListItemButton>
@@ -42,13 +42,13 @@ export const MainListItems  = (props: any) => {
 
     <ListItemButton onClick={() => setCurrView(3)}>
        <ListItemIcon>
-         <Book />
+         <Note />
        </ListItemIcon>
        <ListItemText primary="Incoming_Form" />
      </ListItemButton>
      <ListItemButton onClick={() => setCurrView(4)}>
       <ListItemIcon>
-        <Book/>
+        <Note/>
       </ListItemIcon>
       <ListItemText primary="OutgoingForm" />
     </ListItemButton>

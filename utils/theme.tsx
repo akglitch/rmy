@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
-import { createTheme } from "@mui/material/styles";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 export const ColorModeContext = React.createContext({
   toggleColorMode: () => {},
@@ -42,7 +42,6 @@ export const useThemeHook = () => {
                 secondary: {
                   main: "#219ebc",
                 },
-                // divider: "#90e0ef",
                 text: {
                   primary: "#023047",
                   secondary: "#264653",
@@ -56,7 +55,6 @@ export const useThemeHook = () => {
                 secondary: {
                   main: "#76c893",
                 },
-                // divider: "#5fa8d3",
                 background: {
                   default: "#0a0908",
                   paper: "#00171f",
@@ -77,4 +75,14 @@ export const useThemeHook = () => {
     colorMode,
     theme,
   };
+};
+
+export const ColorModeProvider = ({ children }) => {
+  const { colorMode, theme } = useThemeHook();
+
+  return (
+    <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    </ColorModeContext.Provider>
+  );
 };

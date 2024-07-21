@@ -71,7 +71,7 @@ const Outgoing: React.FC = () => {
         </TableBody>
       </Table>
       <Link color="primary" href="#" onClick={(e) => e.preventDefault()} sx={{ mt: 3 }}>
-        See more orders
+        See more outgoing
       </Link>
     </React.Fragment>
   );

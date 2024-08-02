@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, ReactNode } from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 export const ColorModeContext = React.createContext({
@@ -77,7 +77,11 @@ export const useThemeHook = () => {
   };
 };
 
-export const ColorModeProvider = ({ children }) => {
+interface ColorModeProviderProps {
+  children: ReactNode;
+}
+
+export const ColorModeProvider: React.FC<ColorModeProviderProps> = ({ children }) => {
   const { colorMode, theme } = useThemeHook();
 
   return (

@@ -1,9 +1,10 @@
 "use client"
 
 import React from "react"
-import SignIn from "./login"
+import Login from "./signIn"
+
 export default function Home () {
     return (
-        <SignIn />
+        <Login />
     )
 }

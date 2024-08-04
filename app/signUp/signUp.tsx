@@ -94,7 +94,7 @@ const SignUp: React.FC = () => {
             <Link href="/login" className='font-medium text-blue-600 hover:text-blue-500'>Login
             </Link>
           </p>
-          <p className='text-gray-800'>experience the dashboard <Link href="https://rmy.vercel.app/dash" className='text-blue-600 hover:text-blue-500'>Dashboard</Link></p>
+        
         </div>
       </div>
     </div>

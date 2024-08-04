@@ -9,11 +9,20 @@ import PeopleIcon from '@mui/icons-material/People';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import LayersIcon from '@mui/icons-material/Layers';
 import AssignmentIcon from '@mui/icons-material/Assignment';
-import { Book, Note, Print, Scanner, ScannerSharp } from '@mui/icons-material';
-
+import { Book, Logout, Note, Print, Scanner, ScannerSharp } from '@mui/icons-material';
+import axios from 'axios';
+import { useRouter } from 'next/navigation';
 
 export const MainListItems  = (props: any) => {
-   
+  const router = useRouter();
+  const handleLogout = async () => {
+    try {
+      await axios.post('http://localhost:5000/api/logout', {}, { withCredentials: true });
+      router.push('/login');
+    } catch (error: any) {
+      console.error('Error logging out:', error.response?.data?.message || error.message);
+    }
+  };
   const {setCurrView} = props
 
  return (
@@ -69,17 +78,25 @@ export const MainListItems  = (props: any) => {
       </ListItemIcon>
       <ListItemText primary="Scan" />
     </ListItemButton>
-
+    <ListSubheader  >
+    <ListItemButton onClick={handleLogout} >
+      <ListItemIcon>
+        <Logout />
+      </ListItemIcon>
+      <ListItemText primary="Logout" />
+    </ListItemButton>
+    </ListSubheader>
    </React.Fragment>
  );
 }
 
 
 export const secondaryListItems = (
+ 
+
+
   <React.Fragment>
-    <ListSubheader component="div" inset>
-      loading
-    </ListSubheader>
+    
    
   
      

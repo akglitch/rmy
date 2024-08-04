@@ -75,12 +75,7 @@ const Login: React.FC = () => {
             Don't have an account?{' '}
             <Link href="/signUp" className='font-medium text-blue-600 hover:text-blue-500'>Sign Up</Link>
           </p>
-          <p className='text-gray-800'>
-            Experience the dashboard{' '}
-            <Link href="https://rmy.vercel.app/dash" className='text-blue-600 hover:text-blue-500'>
-              Dashboard
-            </Link>
-          </p>
+        
         </div>
       </div>
     </div>
